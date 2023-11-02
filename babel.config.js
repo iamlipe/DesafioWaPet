@@ -1,23 +1,24 @@
 module.exports = {
-  presets: ['module:metro-react-native-babel-preset'],
+  presets: ['babel-preset-expo'],
   plugins: [
+    [
+      'module:react-native-dotenv',
+      {
+        envName: 'APP_ENV',
+        moduleName: '@env',
+        path: '.env',
+      },
+    ],
     [
       'module-resolver',
       {
-        root: '.',
-        extensions: [
-          '.js',
-          '.jsx',
-          '.ts',
-          '.tsx',
-          '.android.js',
-          '.android.tsx',
-          '.ios.js',
-          '.ios.tsx',
-        ],
+        root: ['.'],
         alias: {
-          '@/': './src',
+          '@': './src',
+          '@/__mocks__': './__mocks__',
+          '@/__tests__': './__tests__',
         },
+        extensions: ['.ios.js', '.android.js', '.json', '.js', '.jsx', '.ts', '.tsx'],
       },
     ],
   ],
