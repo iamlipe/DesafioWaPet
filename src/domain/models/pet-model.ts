@@ -1,6 +1,14 @@
 export interface PetModel {
   id: string;
-  breeds: string[];
-  categories: string[];
-  url: string;
+  image: string;
+  breed: Breed;
+}
+
+interface Breed {
+  id: string;
+  weight: string;
+  name: string;
+  countryCode: string;
+  lifeSpan: string;
+  temperament: string;
 }
