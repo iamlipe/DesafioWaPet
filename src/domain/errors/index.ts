@@ -1,3 +1,3 @@
-export * from './access-denied-error';
-export * from './invalid-credentials-error';
+export * from './unauthorized-error';
 export * from './unexpected-error';
+export * from './invalid-credentials-error';
