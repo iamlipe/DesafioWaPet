@@ -4,5 +4,5 @@ export interface AuthContextInterface {
   user?: AccountModel | null;
   isLoading: boolean;
   login: (user: AccountModel) => void;
-  loggout: () => void;
+  logout: () => void;
 }

@@ -3,12 +3,13 @@ import { getCurrentAccountAdapter } from '@/main/adapters';
 
 import { AuthContextInterface } from './types';
 import { AccountModel } from '@/domain/models';
+import { Alert } from 'react-native';
 
 export const AuthContext = createContext<AuthContextInterface>({
   user: null,
   isLoading: false,
   login: () => {},
-  loggout: () => {},
+  logout: () => {},
 });
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
@@ -21,13 +22,13 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       const parseUserAccount = JSON.parse(userAccount);
       setUser(parseUserAccount);
     } catch (error) {
-      // NOTE: DO SOMETHING
+      Alert.alert('Failed to retrieve user');
     } finally {
-      setIsLoading(false);
+      setTimeout(() => setIsLoading(false), 1000);
     }
   }, []);
 
-  function loggout() {
+  function logout() {
     setUser(null);
     setIsLoading(false);
   }
@@ -42,7 +43,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   }, [isLogged]);
 
   return (
-    <AuthContext.Provider value={{ isLoading, user, login, loggout }}>
+    <AuthContext.Provider value={{ isLoading, user, login, logout }}>
       {children}
     </AuthContext.Provider>
   );
