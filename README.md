@@ -21,7 +21,7 @@ Caso você deseje, há um arquivo APK disponível na raiz do projeto.
 
 ```terminal
 Clone o repositorio:
-$ git clone git@github.com:iamlipe/DesafioWaPet
+$ git clone git@github.com:iamlipe/DesafioWaPet.git
 
 $ cd DesafioWaPet
 
