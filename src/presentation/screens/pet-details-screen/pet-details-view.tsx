@@ -22,7 +22,7 @@ export function PetDetilsScreen() {
         </Styled.Description>
 
         <Styled.Description type="h6">
-          Life Span: {viewController.pet.breed.lifeSpan + ' years.'}
+          Life Span: {viewController.pet.breed.lifeSpan}
         </Styled.Description>
       </Styled.Container>
     </Styled.SafeArea>

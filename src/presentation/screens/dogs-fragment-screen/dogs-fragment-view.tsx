@@ -51,7 +51,7 @@ export function DogsFragmentView() {
         renderItem={({ item }) => (
           <FeedPetCard
             title={item.breed.name}
-            description={item.breed.weight}
+            description={item.breed.weight + ' kg'}
             image={item.image}
             onPress={() => navigate('PetDetails', { data: item })}
           />
