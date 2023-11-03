@@ -1,6 +1,16 @@
 [
     {
-        "email": "felipe@waprojects.com.br",
-        "password": "12345678"
+        "email": "bob@example.com",
+        "password": "12345678",
+        "name": "Bob Green",
+        "age": 30,
+        "city": "New York"
+    },
+    {
+        "email": "maria@example.com",
+        "password": "abcdefgh",
+        "name": "Maria Brown",
+        "age": 25,
+        "city": "London"
     }
 ]

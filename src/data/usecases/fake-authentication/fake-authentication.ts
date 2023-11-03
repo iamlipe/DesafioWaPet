@@ -11,15 +11,19 @@ export class FakeAuthentication implements Authentication {
       body: undefined,
     };
 
-    fakeAccounts.forEach(account => {
+    for (let i = 0; i < fakeAccounts.length; i++) {
+      const account = fakeAccounts[i];
       const body: { data: AccountModel } = {
-        data: { email: account.email },
+        data: { email: account.email, city: account.city, age: account.age, name: account.name },
       };
 
       if (account.email === params.email && account.password === params.password) {
         httpResponse = { statusCode: 200, body };
+        break;
+      } else {
+        httpResponse = { statusCode: 401, body: undefined };
       }
-    });
+    }
 
     const response = httpResponse.body as { data: AccountModel };
 
