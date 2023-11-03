@@ -1,35 +1,60 @@
+import { useCallback, useContext, useState } from 'react';
 import { setCurrentAccountAdapter } from '@/main/adapters';
 import { makeFakeAuthentication } from '@/main/factories/usecases/';
 import { AuthContext } from '@/presentation/contexts';
-import { useContext, useState } from 'react';
+import { useFormik } from 'formik';
+import { toFormikValidationSchema } from 'zod-formik-adapter';
+import { Alert } from 'react-native';
+import loginSchema, { FormLogin } from '@/main/validators/login';
 
 export function useLoginScreenViewController() {
   const { login } = useContext(AuthContext);
   const [isLoading, setIsLoading] = useState(false);
-  const [hasAuthenticationFailed, setHasAuthenticationFailed] = useState(false);
 
-  async function handleLogin() {
-    setIsLoading(true);
-    const fakeAuthentication = makeFakeAuthentication();
+  const initialValues = {
+    email: '',
+    password: '',
+  };
 
-    try {
-      const response = await fakeAuthentication.execute({
-        email: 'felipe@waprojects.com.br',
-        password: '12345678',
-      });
+  const onSubmit = useCallback(
+    async (data: FormLogin) => {
+      setIsLoading(true);
+      const fakeAuthentication = makeFakeAuthentication();
 
-      await setCurrentAccountAdapter(response.data);
-      login(response.data);
-    } catch (error) {
-      setHasAuthenticationFailed(true);
-    } finally {
-      setIsLoading(false);
-    }
-  }
+      try {
+        const response = await fakeAuthentication.execute({
+          email: data.email,
+          password: data.password,
+        });
+
+        await setCurrentAccountAdapter(response.data);
+
+        login(response.data);
+      } catch (error) {
+        if (error instanceof Error) {
+          Alert.alert('Error', 'An error occurred: ' + error.message);
+        } else {
+          Alert.alert('Error', 'Oops, something went wrong. Please try again.');
+        }
+      } finally {
+        setIsLoading(false);
+      }
+    },
+    [login],
+  );
+
+  const { handleChange, handleSubmit, values, errors, submitCount } = useFormik({
+    initialValues,
+    onSubmit,
+    validationSchema: toFormikValidationSchema(loginSchema),
+  });
 
   return {
-    handleLogin,
+    handleSubmit,
+    handleChange,
+    values,
+    errors,
+    submitCount,
     isLoading,
-    hasAuthenticationFailed,
   };
 }
