@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* DesafioWaPetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* DesafioWaPetTests.m */; };
 		0C80B921A6F3F58F76C31292 /* libPods-DesafioWaPet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-DesafioWaPet.a */; };
+		0F938A891ACF46888C74C116 /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4611A570D1040828E368177 /* Rubik-Bold.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -16,7 +17,6 @@
 		7699B88040F8A987B510C191 /* libPods-DesafioWaPet-DesafioWaPetTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-DesafioWaPet-DesafioWaPetTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		987C80C5B448A94A218C3C61 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE90C8BF67EA2D1C08E398A /* ExpoModulesProvider.swift */; };
-		0F938A891ACF46888C74C116 /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4611A570D1040828E368177 /* Rubik-Bold.ttf */; };
 		CD42A188C6AE49B886F9D20A /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 61819240E2A141AA800A2ED4 /* Rubik-Medium.ttf */; };
 		EFAC3310D3D4412DA11AA37D /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B7C3CE7EE984CADABFEDA2C /* Rubik-Regular.ttf */; };
 /* End PBXBuildFile section */
@@ -43,17 +43,17 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = DesafioWaPet/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-DesafioWaPet-DesafioWaPetTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DesafioWaPet-DesafioWaPetTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4392A12AC88292D35C810B /* Pods-DesafioWaPet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioWaPet.debug.xcconfig"; path = "Target Support Files/Pods-DesafioWaPet/Pods-DesafioWaPet.debug.xcconfig"; sourceTree = "<group>"; };
+		3B7C3CE7EE984CADABFEDA2C /* Rubik-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Regular.ttf"; path = "../src/main/assets/fonts/Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		3DE90C8BF67EA2D1C08E398A /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-DesafioWaPet-DesafioWaPetTests/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-DesafioWaPet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioWaPet.release.xcconfig"; path = "Target Support Files/Pods-DesafioWaPet/Pods-DesafioWaPet.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-DesafioWaPet-DesafioWaPetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioWaPet-DesafioWaPetTests.debug.xcconfig"; path = "Target Support Files/Pods-DesafioWaPet-DesafioWaPetTests/Pods-DesafioWaPet-DesafioWaPetTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-DesafioWaPet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DesafioWaPet.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		61819240E2A141AA800A2ED4 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Medium.ttf"; path = "../src/main/assets/fonts/Rubik-Medium.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = DesafioWaPet/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-DesafioWaPet-DesafioWaPetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioWaPet-DesafioWaPetTests.release.xcconfig"; path = "Target Support Files/Pods-DesafioWaPet-DesafioWaPetTests/Pods-DesafioWaPet-DesafioWaPetTests.release.xcconfig"; sourceTree = "<group>"; };
 		9FF8A67EBC399E7FE46DB7E0 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-DesafioWaPet/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		A4611A570D1040828E368177 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Bold.ttf"; path = "../src/main/assets/fonts/Rubik-Bold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		A4611A570D1040828E368177 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; name = "Rubik-Bold.ttf"; path = "../src/main/assets/fonts/Rubik-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		61819240E2A141AA800A2ED4 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; name = "Rubik-Medium.ttf"; path = "../src/main/assets/fonts/Rubik-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		3B7C3CE7EE984CADABFEDA2C /* Rubik-Regular.ttf */ = {isa = PBXFileReference; name = "Rubik-Regular.ttf"; path = "../src/main/assets/fonts/Rubik-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +104,17 @@
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
 			name = DesafioWaPet;
+			sourceTree = "<group>";
+		};
+		1DE196899CFC4E449A3AC17A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A4611A570D1040828E368177 /* Rubik-Bold.ttf */,
+				61819240E2A141AA800A2ED4 /* Rubik-Medium.ttf */,
+				3B7C3CE7EE984CADABFEDA2C /* Rubik-Regular.ttf */,
+			);
+			name = Resources;
+			path = "";
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -184,17 +195,6 @@
 			);
 			name = DesafioWaPet;
 			sourceTree = "<group>";
-		};
-		1DE196899CFC4E449A3AC17A /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				A4611A570D1040828E368177 /* Rubik-Bold.ttf */,
-				61819240E2A141AA800A2ED4 /* Rubik-Medium.ttf */,
-				3B7C3CE7EE984CADABFEDA2C /* Rubik-Regular.ttf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
