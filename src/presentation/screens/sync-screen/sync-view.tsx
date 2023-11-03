@@ -1,10 +1,13 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import * as Styled from './styles';
 
 export function SyncScreen() {
+  const dog = '../../../main/assets/imgs/good-boy.png';
+
   return (
-    <View>
-      <Text>Sync Screen</Text>
-    </View>
+    <Styled.Container>
+      <Styled.GoodBoy resizeMode="contain" source={require(dog)} alt="good-boy" />
+      <Styled.Text>Carregando...</Styled.Text>
+    </Styled.Container>
   );
 }
