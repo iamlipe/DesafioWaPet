@@ -9,8 +9,6 @@ export function ProfileScreen() {
   const { colors, effects } = useTheme();
   const { user, logout } = useContext(AuthContext);
 
-  console.log(user);
-
   return (
     <Styled.SafeArea>
       <Styled.Container>
