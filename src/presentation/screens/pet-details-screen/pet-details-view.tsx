@@ -17,10 +17,12 @@ export function PetDetilsScreen() {
           Temperament: {viewController.pet.breed.temperament}
         </Styled.Description>
 
-        <Styled.Description type="h6">Weight: {viewController.pet.breed.weight}</Styled.Description>
+        <Styled.Description type="h6">
+          Weight: {viewController.pet.breed.weight + ' kg'}
+        </Styled.Description>
 
         <Styled.Description type="h6">
-          Life Span: {viewController.pet.breed.lifeSpan}
+          Life Span: {viewController.pet.breed.lifeSpan + ' years.'}
         </Styled.Description>
       </Styled.Container>
     </Styled.SafeArea>
