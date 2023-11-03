@@ -8,8 +8,6 @@ import { SyncScreen } from '@/presentation/screens';
 export function Routes() {
   const { user, isLoading } = useContext(AuthContext);
 
-  console.log(isLoading);
-
   if (isLoading) {
     return <SyncScreen />;
   }

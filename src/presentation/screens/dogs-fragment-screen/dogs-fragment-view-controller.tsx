@@ -24,8 +24,6 @@ export function useDogsFragmentsViewController() {
     handleDogs();
   }, []);
 
-  console.log(dogs);
-
   return {
     dogs,
     isLoading,
