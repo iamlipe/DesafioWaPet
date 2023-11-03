@@ -17,6 +17,8 @@ Princípios de Arquitetura limpa (Clean Architecture) foram utilizados no desenv
 
 ## Como Executar
 
+Caso você deseje, há um arquivo APK disponível na raiz do projeto.
+
 ```terminal
 Clone o repositorio:
 $ git clone git@github.com:iamlipe/DesafioWaPet
