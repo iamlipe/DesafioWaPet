@@ -1,7 +1,9 @@
-import { SetSecureStorage, GetSecureStorage } from '@/data/protocols/cache';
+import { DeleteSecureStorage, GetSecureStorage, SetSecureStorage } from '@/data/protocols/cache';
 import * as SecureStore from 'expo-secure-store';
 
-export class LocalSecureStorageAdapter implements SetSecureStorage, GetSecureStorage {
+export class LocalSecureStorageAdapter
+  implements GetSecureStorage, SetSecureStorage, DeleteSecureStorage
+{
   async set(key: string, value: object): Promise<void> {
     return await SecureStore.setItemAsync(key, JSON.stringify(value));
   }
