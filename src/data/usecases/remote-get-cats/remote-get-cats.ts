@@ -1,7 +1,7 @@
 import { RemoteCatModel } from '@/data/models/';
 import { HttpClient, HttpStatusCode } from '@/data/protocols/http';
 import { InvalidCredentialsError, UnexpectedError } from '@/domain/errors';
-import { GetCats } from '@/domain/usecases/get-cats';
+import { GetCats } from '@/domain/repositories';
 import { PetModel } from '@/domain/models';
 import { CatMapper } from '@/data/mappers/cat-mapper';
 import { KEY_CAT_API } from '@env';

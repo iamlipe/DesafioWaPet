@@ -1,9 +1,9 @@
 import { RemoteDogModel } from '@/data/models';
 import { HttpClient, HttpStatusCode } from '@/data/protocols/http';
 import { UnauthorizedError, UnexpectedError } from '@/domain/errors';
-import { GetDogs } from '@/domain/usecases/get-dogs';
+import { GetDogs } from '@/domain/repositories';
 import { PetModel } from '@/domain/models/';
-import { DogMapper } from '@/data/mappers/dog-mapper';
+import { DogMapper } from '@/data/mappers';
 import { KEY_DOG_API } from '@env';
 
 export class RemoteGetDogs implements GetDogs {

@@ -1,5 +1,5 @@
 import { HttpResponse, HttpStatusCode } from '@/data/protocols/http';
-import { Authentication, AuthenticationParams } from '@/domain/usecases';
+import { Authentication, AuthenticationParams } from '@/domain/repositories';
 import { InvalidCredentialsError, UnexpectedError } from '@/domain/errors';
 import { AccountModel } from '@/domain/models';
 import fakeAccounts from './fake-accounts.json';
