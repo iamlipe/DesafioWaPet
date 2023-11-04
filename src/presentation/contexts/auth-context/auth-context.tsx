@@ -1,6 +1,5 @@
 import React, { useState, createContext, useEffect, useCallback } from 'react';
-import { getCurrentAccountAdapter } from '@/main/adapters';
-
+import { getCurrentAccountAdapter, deleteCurrentAccountAdapter } from '@/main/adapters';
 import { AuthContextInterface } from './types';
 import { AccountModel } from '@/domain/models';
 import { Alert } from 'react-native';
@@ -22,21 +21,26 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       const parseUserAccount = JSON.parse(userAccount);
       setUser(parseUserAccount);
     } catch (error) {
-      Alert.alert('Failed to retrieve user');
+      Alert.alert('Error', 'Failed to retrieve user');
     } finally {
       setTimeout(() => setIsLoading(false), 1000);
     }
   }, []);
 
-  function logout() {
-    setUser(null);
-    setIsLoading(false);
-  }
+  const logout = async () => {
+    try {
+      setIsLoading(true);
+      setUser(null);
+      await deleteCurrentAccountAdapter();
+      setIsLoading(false);
+    } catch (error) {
+      Alert.alert('Error', 'Failed to logout user');
+    }
+  };
 
-  function login(account: AccountModel) {
+  const login = (account: AccountModel) => {
     setUser(account);
-    setIsLoading(false);
-  }
+  };
 
   useEffect(() => {
     isLogged();
