@@ -42,6 +42,8 @@ executar testes unitários
 $ yarn run test
 ```
 
+Existe um arquivo fake-accounts.json com os usuarios cadastrados em src/data/usecases/fake-authentication use ele para fazer login no aplicativo.
+
 ## Preview
 
 <div>
